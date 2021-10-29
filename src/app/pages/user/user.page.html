@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Utilisateurs</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/home">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let item of items |async">
+    <ion-item>
+    <h6>{{ item.userName}}</h6><br>
+    &nbsp;&nbsp;<h6>{{ item.userEmail}}</h6><br>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+

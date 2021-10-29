@@ -1,0 +1,21 @@
+<ion-buttons slot="start">
+  <ion-back-button defaultHref="login" text=""></ion-back-button>
+</ion-buttons>
+
+
+<ion-content class="bg-color">
+<ion-card class="ion-no-margin">
+  <ion-img src="assets/images/kalanso.jpeg"></ion-img>
+  <ion-card-content>
+    <div class="signin-btn">
+      <ion-button fill="solid" [routerLink]="['/loginscreen']" shape="round" class="loginbtn ion-no-padding">Connexion</ion-button>
+      <ion-button fill="outline" [routerLink]="['/signup']" shape="round" color="dark" class="ion-no-padding">Inscription</ion-button>
+    </div>
+   <!-- <div class="text-tag">
+      <span>Mot de passe oublié ?</span>
+    </div>
+    -->
+
+  </ion-card-content>
+</ion-card>
+</ion-content>

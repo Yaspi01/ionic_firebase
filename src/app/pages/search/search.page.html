@@ -1,0 +1,21 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>search</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/home">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content>
+  <ion-searchbar [(ngModel)]=search></ion-searchbar>
+
+  <ion-list *ngFor="let user of donnee |filter:search">
+    <ion-item >
+      <h6>{{user.userName}}</h6>
+      <h6>{{ user.userEmail}}</h6>
+    </ion-item>
+  </ion-list>
+</ion-content>

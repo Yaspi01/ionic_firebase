@@ -1,0 +1,51 @@
+<ion-content class="main">
+  <ion-app>
+    <ion-menu side="start" content-id="main-content">
+      <ion-header>
+        <ion-toolbar translucent>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>
+            <ion-icon name="aperture-outline" slot="start"></ion-icon>
+            <p [routerLink]="['/search']">Recherche</p>
+          </ion-item><ion-item>
+          <ion-icon name="people" slot="start"></ion-icon>
+          <p [routerLink]="['/user']">Utilisateur</p>
+        </ion-item>
+          <ion-item>
+            <ion-icon name="lock-closed" slot="start"></ion-icon>
+            <p [routerLink]="['/change-password']">Changer mot de passe</p>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="lock-closed" slot="start"></ion-icon>
+            <p [routerLink]="['/forgotpassword']">Mot de passe oublié</p>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="log-out-outline" slot="start"></ion-icon>
+            <p (click)="signOut()">Deconnexion</p>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>{{user?.userName}}</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="bg-color">
+        <div class="profile">
+          <h3>Bienvenue: {{user?.userName}}</h3>
+          <h3>{{user?.userEmail}}</h3>
+        </div>
+      </ion-content>
+    </div>
+  </ion-app>
+</ion-content>

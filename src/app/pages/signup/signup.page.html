@@ -1,0 +1,51 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+   <!-- <ion-title>signup</ion-title> -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-color">
+  <ion-card>
+    <ion-card-content>
+      <ion-card-header>
+        <ion-card-title>Inscription</ion-card-title>
+      </ion-card-header>
+      <form #form="ngForm" (ngSubmit)=register(form)>
+        <div class="wrapform">
+      <ion-item>
+        <ion-input name="names" type="text" ngModel placeholder="Nom prenom">
+        <ion-icon name="person-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input name="phone" type="text" ngModel placeholder="Téléphone">
+          <ion-icon name="call-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input name="email" type="email" ngModel placeholder="Email">
+          <ion-icon name="mail-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input name="password" type="password"  ngModel placeholder="Mot de passe">
+          <ion-icon name="lock-closed"></ion-icon>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input name="password_confirm" type="password" ngModel placeholder="Mot de passe confirmation">
+          <ion-icon name="lock-closed"></ion-icon>
+        </ion-input>
+      </ion-item>
+          <div class="signin-btn-wrap">
+            <ion-button type="submit" expand="block" shape="round" fill="solid" class="signin-btn">Inscription</ion-button>
+          </div>
+        </div>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
